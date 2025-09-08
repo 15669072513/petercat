@@ -5,8 +5,9 @@
   "scripts": {
     "bootstrap": "yarn",
     "dev": "next dev",
-    "build": "next build",
+    "build:start": "next build && node .next/standalone/server.js",
     "build:docker": "docker build -t petercat .",
+    "start:standalone": "node .next/standalone/server.js",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"app\"",
