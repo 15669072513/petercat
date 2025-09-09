@@ -5,10 +5,10 @@
   "scripts": {
     "bootstrap": "yarn",
     "dev": "next dev",
-    "build:start": "next build && node .next/standalone/server.js",
+    "build": "next build",
     "build:docker": "docker build -t petercat .",
-    "start:standalone": "node .next/standalone/server.js",
-    "start": "next start",
+    "start:standalone": "next build && node .next/standalone/server.js",
+    "start": "next build && next start",
     "lint": "next lint",
     "format": "prettier --write \"app\"",
     "extract-lang:components": "kiwi --extract components",

@@ -1,7 +1,6 @@
 const { withSentryConfig } = require("@sentry/nextjs");
 
 const nextConfig = {
-  ...process.env.NEXT_STANDALONE ? { output: "standalone" } : {}, // Standalone configuration
   webpack: (config, { dev }) => {
     config.resolve.fallback = { http: false, https: false, net: false, tls: false };
 
